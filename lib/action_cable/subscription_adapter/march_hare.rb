@@ -17,7 +17,7 @@ module ActionCable
       def initialize(*)
         super
         @listener = nil
-        @connection = ::MarchHare.connect
+        @connection = ::MarchHare.connect(@server.config.cable)
         @channel = @connection.create_channel
       end
 
