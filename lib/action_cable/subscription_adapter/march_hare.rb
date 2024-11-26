@@ -82,8 +82,8 @@ module ActionCable
           @queue.push([:listen, channel, on_success])
         end
 
-        def remove_channel(channel, on_success)
-          @queue.push([:unlisten, channel, on_success])
+        def remove_channel(channel)
+          @queue.push([:unlisten, channel])
         end
 
         def shutdown
